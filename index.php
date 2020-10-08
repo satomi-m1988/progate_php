@@ -106,7 +106,58 @@
 		 	default:
 		 	 echo '凶です。';
 		 	break;
-		 }?>
+		 }?><br>
+		 <?php
+		 $colors = array('赤','青','黄');
+		 echo $colors[0];
+		 $colors[] = '白';
+		 echo $colors[3];
+		?><br>
+		<?php
+		 $scores = array(
+		 	'数学' => '70',
+		 	'英語' => '90',
+		 	'国語' => '80'
+		 );
+		 $scores['国語'] += 5;
+		 echo $scores['国語'];
+		?><br>
+		<?php
+		for ($i = 51 ; $i <= 100 ; $i++){
+			echo $i;
+			echo '<br>';
+		}?><br>
+		<?php
+		$i = 2;
+		while($i <= 100){
+			if($i % 2 == 0){
+				echo $i;
+				echo '<br>';
+			}
+			$i++;
+		}?><br>
+		<?php
+		for($i = 1 ; $i <= 1000 ; $i++){
+			if($i > 500){
+				break;
+			}
+			echo $i;
+			echo '<br>';
+		}?><br>
+		<?php
+		for($i=1 ; $i <= 1000 ; $i++){
+			if($i % 3 == 0){
+				continue;
+			}
+			echo $i;
+			echo '<br>';
+		}?><br>
+		<?php
+		$scores = array('数学' => 70 , '英語' => 90 , '国語' => 80);
+		foreach($scores as $key => $value){
+			echo $key.'は'.$value.'点です。';
+		}
+		?>
 
 
 	</body>
