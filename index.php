@@ -157,8 +157,43 @@
 		foreach($scores as $key => $value){
 			echo $key.'は'.$value.'点です。';
 		}
-		?>
+		?><br>
+		<?php
+		$str = 'progate';
+		// strlen関数は文字列の文字数を返す
+		echo strlen($str);
+		echo '<br>';
 
+		$array = array('HTML','CSS','PHP');
+		// count関数は配列の要素の数を返す
+		echo count($array);
+		echo '<br>';
+		// rand関数は()内の数のランダムな数を返す（今回は10から15のランダムな数を返す)
+		echo rand(10,15);
+		?><br>
+		<?php
+		// function ○○(){};で関数を自作できる
+		function hello(){
+			echo 'Hello,world!';
+		};
+		hello();
+		// 関数の()内には引数を入れる事ができるこれは仮引数であって、関数を呼び出した際に仮引数の中に引数が入るイメージ
+		function printRectangleArea($height,$width){
+			echo $height * $width;
+		};
+		printRectangleArea(5,10);
+
+		?><br>
+		<?php
+
+		function getCircleArea($radius){
+			// returnは戻り値を表す　戻り値とは関数を実行した結果のこと
+			return $radius * $radius * 3;
+		}
+		$circleArea = getCircleArea(5);
+
+		echo $circleArea;
+		?>
 
 	</body>
 </html>
